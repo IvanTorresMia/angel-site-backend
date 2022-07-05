@@ -1,16 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql2');
-const path = require("path");
 
 /* GET home page. */
-// If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../../client/build/index.html"));
-});
-
-router.get("/message", (req, res) => {
-  res.send({ response: "I am alive" }).status(200);
+router.get('/', function(req, res, next) {
+  res.json({data:  "hello world"});
 });
 
 module.exports = router;
