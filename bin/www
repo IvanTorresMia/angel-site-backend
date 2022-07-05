@@ -15,6 +15,12 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
+// Used to load the files that are in the directory public and recognizes them as static.
+if (process.env.JAWSDB_URL === "production") {
+  app.use(express.static("client/build"));
+}
+
+
 /**
  * Create HTTP server.
  */
