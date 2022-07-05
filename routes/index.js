@@ -13,7 +13,7 @@ router.use(function(req, res) {
 })
 
 router.get("/message", (req, res) => {
-  res.send({ response: "I am alive" }).status(200);
+  res.json({ response: "I am alive" })
 });
 
 module.exports = router;
