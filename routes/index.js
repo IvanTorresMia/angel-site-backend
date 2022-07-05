@@ -3,8 +3,9 @@ var router = express.Router();
 var mysql = require('mysql2');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.json({data: "hello world"});
+// If no API routes are hit, send the React app
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 module.exports = router;
