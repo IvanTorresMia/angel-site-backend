@@ -5,8 +5,12 @@ const path = require("path");
 
 /* GET home page. */
 // If no API routes are hit, send the React app
-router.get("/", function(req, res) {
+router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+});
+
+router.get("/message", (req, res) => {
+  res.send({ response: "I am alive" }).status(200);
 });
 
 module.exports = router;
