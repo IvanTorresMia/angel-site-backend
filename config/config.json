@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Password!",
+    "database": "AngelPortfolio",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "z1msly98a50zerrm",
+    "password": "xc5r47v505227w60",
+    "database": "plq4day77b9u1ms1",
+    "host": "n4m3x5ti89xl6czh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

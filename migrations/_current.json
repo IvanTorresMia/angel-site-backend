@@ -1,0 +1,13 @@
+{
+    "tables": {
+        "applicants": {
+            "tableName": "applicants",
+            "indexes": []
+        },
+        "users": {
+            "tableName": "users",
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
