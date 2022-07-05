@@ -17,8 +17,8 @@ const path = require("path");
 // });
 
 
-app.use(express.static('client/build'));
-app.get('*',(req,res)=>{
+router.use(express.static('client/build'));
+router.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
 })
 
