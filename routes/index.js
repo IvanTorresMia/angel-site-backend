@@ -9,7 +9,7 @@ const { path } = require('../app');
 // });
 
 router.use(function(req, res) {
-  res.json({data:  "hello world"});
+  res.sendFile(path.join(__dirname, "../../client/build/index.html"));
 })
 
 module.exports = router;
