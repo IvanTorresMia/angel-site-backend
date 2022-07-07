@@ -20,6 +20,12 @@ if (process.env.JAWSDB_URL === "production") {
   app.use(express.static("client/build"));
 }
 
+
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://torresfitness.herokuapp.com/'
+}));
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
