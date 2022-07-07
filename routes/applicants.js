@@ -8,7 +8,7 @@ router.use(cors());
 
 router.post("/", (req, res, next) => {
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com/");
+  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com");
   console.log(req.body);
   models.applicants
     .create({
@@ -33,7 +33,7 @@ router.post("/", (req, res, next) => {
 
 router.get("/", (req, res, next) => {
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com/");
+  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com");
   models.applicants
     .findAll()
     .then((response) => {
@@ -47,7 +47,7 @@ router.get("/", (req, res, next) => {
 
 router.get("/:id", (req, res, next) => {
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com/");
+  res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com");
 
   let id = req.params.id
   console.log(id)
