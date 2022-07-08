@@ -7,7 +7,7 @@ var cors = require("cors");
 router.use(cors());
 
 router.post("/", function(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com");
   models.users
     .findOrCreate({
@@ -32,7 +32,7 @@ router.post("/", function(req, res) {
 
 // this route get's called when user logs in
 router.post("/login", (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader("Access-Control-Allow-Origin", "https://torresfitness.herokuapp.com");
   models.users
     .findOne({
